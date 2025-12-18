@@ -1,0 +1,306 @@
+/* Navbar.css - FIXED VERSION */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(10, 25, 47, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+    transition: all 0.3s ease;
+    height: 70px; /* Fixed height */
+    display: flex;
+    align-items: center;
+}
+
+.navbar.scrolled {
+    padding: 10px 0;
+    background-color: rgba(10, 25, 47, 0.98);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 10px;
+}
+
+.logo-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #64ffda;
+    letter-spacing: 1px;
+    position: relative;
+    padding: 5px 0;
+}
+
+.logo-text::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #64ffda;
+    transition: width 0.3s ease;
+}
+
+.logo:hover .logo-text::after {
+    width: 100%;
+}
+
+/* Desktop Navigation Links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-links a {
+    color: #ccd6f6;
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 8px 0;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-links a:hover {
+    color: #64ffda;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #64ffda;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Active link styling */
+.nav-links a.active {
+    color: #64ffda;
+}
+
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* Mobile Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    position: relative;
+    z-index: 1001;
+}
+
+.hamburger {
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.hamburger span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #64ffda;
+    left: 0;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.hamburger span:nth-child(1) {
+    top: 4px;
+}
+
+.hamburger span:nth-child(2) {
+    top: 11px;
+}
+
+.hamburger span:nth-child(3) {
+    top: 18px;
+}
+
+/* Hamburger Animation when active */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 11px;
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 11px;
+}
+
+/* ============================== */
+/* MOBILE RESPONSIVENESS FIXES */
+/* ============================== */
+
+@media (max-width: 768px) {
+    /* FIX 1: Ensure navbar has fixed height */
+    .navbar {
+        height: 70px;
+        padding: 0 20px;
+    }
+    
+    .container {
+        padding: 0;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+
+    /* FIX 2: Mobile menu position - BELOW navbar */
+    .nav-links {
+        position: fixed;
+        top: 70px !important; /* Start below navbar */
+        left: 0;
+        right: 0;
+        height: calc(100vh - 70px); /* Full height minus navbar */
+        background-color: rgba(10, 25, 47, 0.99);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 25px;
+        padding: 40px 20px 20px;
+        transform: translateX(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease;
+        z-index: 999;
+        overflow-y: auto;
+        border-top: 1px solid rgba(100, 255, 218, 0.1);
+        backdrop-filter: blur(10px);
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* FIX 3: Make ALL links visible including Home */
+    .nav-links a {
+        font-size: 1.2rem;
+        padding: 12px 25px;
+        width: 220px;
+        text-align: center;
+        background: rgba(17, 34, 64, 0.7);
+        border-radius: 8px;
+        border: 1px solid rgba(100, 255, 218, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        background-color: rgba(100, 255, 218, 0.1);
+        border-color: rgba(100, 255, 218, 0.3);
+        color: #64ffda;
+        transform: translateY(-3px);
+    }
+
+    /* FIX 4: Hide underline on mobile */
+    .nav-links a::after {
+        display: none;
+    }
+
+    /* FIX 5: Active state for mobile */
+    .nav-links a.active {
+        background-color: rgba(100, 255, 218, 0.1);
+        border-color: #64ffda;
+        color: #64ffda;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 992px) {
+    .nav-links {
+        gap: 25px;
+    }
+    
+    .nav-links a {
+        font-size: 0.95rem;
+    }
+    
+    .logo-text {
+        font-size: 1.6rem;
+    }
+}
+
+/* Small Desktop Styles */
+@media (min-width: 993px) and (max-width: 1200px) {
+    .container {
+        padding: 0 30px;
+    }
+    
+    .nav-links {
+        gap: 35px;
+    }
+}
+
+/* Large Desktop Styles */
+@media (min-width: 1201px) {
+    .container {
+        padding: 0 40px;
+    }
+}
+
+/* Smooth Scrolling Effect */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar Animation on Page Load */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.navbar {
+    animation: slideDown 0.5s ease forwards;
+}
