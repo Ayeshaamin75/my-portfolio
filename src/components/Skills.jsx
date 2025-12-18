@@ -7,14 +7,14 @@ const Skills = () => {
         { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", level: 90 },
         { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", level: 85 },
         { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", level: 88 },
-        { name: "MS Word", icon: "https://cdn-icons-png.flaticon.com/512/732/732220.png", level: 90 },
+        { name: "MS Word", icon: "https://sc.filehippo.net/images/t_app-icon-l/p/b20c5e90-96bf-11e6-9781-00163ed833e7/4112465458/microsoft-word-logo.png", level: 90 },
         { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", level: 78 },
         { name: "Firebase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg", level: 75 },
-        { name: "MS Excel", icon: "https://cdn-icons-png.flaticon.com/512/732/732220.png", level: 85 },
+        { name: "MS Excel", icon: "https://images.dwncdn.net/images/t_app-icon-l/p/0cc9dbb4-9b2f-11e6-9d3f-00163ec9f5fa/2165996588/microsoft-excel-2016-logo.png", level: 85 },
         { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", level: 85 },
         { name: "Express", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", level: 78 },
         { name: "Bootstrap", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg", level: 85 },
-        { name: "PowerPoint", icon: "https://cdn-icons-png.flaticon.com/512/732/732220.png", level: 88 }
+        { name: "PowerPoint", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Microsoft_Office_PowerPoint_%282019%E2%80%932025%29.svg/330px-Microsoft_Office_PowerPoint_%282019%E2%80%932025%29.svg.png", level: 88 }
     ];
 
     return (
