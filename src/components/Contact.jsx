@@ -27,17 +27,18 @@ const Contact = () => {
                             />
                         </a>
                         <a href="https://www.linkedin.com/in/hajra-ameen-95674633a/" target="_blank" rel="noopener noreferrer" className="social-icon">
-                            <img 
-                                src="https://www.logo.wine/a/logo/LinkedIn/LinkedIn-Icon-Black-Logo.wine.svg" 
-                                alt="LinkedIn" 
-                                className="social-icon-img"
-                            />
+                          <img
+  src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg"
+  alt="LinkedIn"
+  className="social-icon-img"
+  style={{ filter: "invert(29%) sepia(98%) saturate(747%) hue-rotate(176deg)" }}
+/>
                         </a>
                         <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" className="social-icon">
                             <img 
                                 src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/facebook.svg" 
                                 alt="Facebook" 
-                                className="social-icon-img"
+                                className="social-icon-img facebook-img"
                             />
                         </a>
                     </div>

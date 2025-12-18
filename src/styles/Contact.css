@@ -155,21 +155,36 @@
     box-shadow: 0 15px 30px rgba(100, 255, 218, 0.2);
 }
 
+/* Social Icons - General Style */
 .social-icon-img {
     width: 30px;
     height: 30px;
-    filter: brightness(0) saturate(100%) invert(82%) sepia(67%) saturate(527%) hue-rotate(104deg) brightness(101%) contrast(101%);
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
     transition: all 0.3s ease;
     position: relative;
     z-index: 2;
 }
 
-/* For Facebook icon */
-.social-icon:nth-child(3) .social-icon-img {
-    filter: brightness(0) saturate(100%) invert(39%) sepia(57%) saturate(2000%) hue-rotate(195deg) brightness(95%) contrast(95%);
+/* GitHub Icon - White */
+.social-icon:first-child .social-icon-img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
 }
 
+/* LinkedIn Icon - WHITE and SIMPLE */
+.linkedin-img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%) !important;
+    width: 28px;
+    height: 28px;
+}
+
+/* Facebook Icon - WHITE */
+.facebook-img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+
+/* On Hover - All icons teal color */
 .social-icon:hover .social-icon-img {
+    filter: brightness(0) saturate(100%) invert(82%) sepia(67%) saturate(527%) hue-rotate(104deg) brightness(101%) contrast(101%) !important;
     transform: rotate(10deg) scale(1.2);
 }
 
