@@ -46,8 +46,8 @@ const Home = () => {
 
   const handleDownloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/Hajra-Amin.pdf";
-    link.download = "Hajra_Amin_CV.pdf";
+    link.href = "/Ayesha_Amin_Resume (1).pdf";
+    link.download = "Ayesha_Amin_Resume (1).pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -59,7 +59,7 @@ const Home = () => {
         <div className="home-content">
           <div className="home-text">
             <h1 className="greeting">
-              Hi, I'm <span className="highlight">Hajra Amin</span>
+              Hi, I'm <span className="highlight">Ayesha Amin</span>
             </h1>
             <div className="typing-text">
               <span className="text-change">
@@ -85,11 +85,11 @@ const Home = () => {
             <div className="image-wrapper">
               {/* Main Profile Image */}
               <img
-                src="/images/girl-image.jpg"
-                alt="Hajra Amin"
+                src="/images/Ayesha.png"
+                alt="Ayesha Amin"
                 className="profile-img"
                 onError={(e) => {
-                  e.target.src = "https://via.placeholder.com/400x500/112240/64ffda?text=Hajra+Amin";
+                  e.target.src = "https://via.placeholder.com/400x500/112240/64ffda?text=Ayesha+Amin";
                 }}
               />
               

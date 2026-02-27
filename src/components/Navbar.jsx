@@ -120,17 +120,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 import { useState, useEffect } from 'react';
 import '../styles/Navbar.css';
 
@@ -147,7 +136,8 @@ const Navbar = () => {
                 setScrolled(false);
             }
 
-            const sections = ['home', 'about', 'projects', 'skills', 'contact'];
+            // "certificates" ko list mein add kar diya gaya hai
+            const sections = ['home', 'about', 'projects', 'skills', 'certificates', 'contact'];
             const current = sections.find(section => {
                 const element = document.getElementById(section);
                 if (element) {
@@ -234,6 +224,19 @@ const Navbar = () => {
                         >
                             Skills
                         </a>
+                        
+                        {/* Naya Certificates Tab yahan add kiya gaya hai */}
+                        <a 
+                            href="#certificates" 
+                            className={activeSection === 'certificates' ? 'active' : ''}
+                            onClick={(e) => { 
+                                e.preventDefault(); 
+                                scrollToSection('certificates'); 
+                            }}
+                        >
+                            Certificates
+                        </a>
+
                         <a 
                             href="#contact" 
                             className={activeSection === 'contact' ? 'active' : ''}

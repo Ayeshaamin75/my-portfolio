@@ -12,7 +12,7 @@ const About = () => {
                 <div className="about-content">
                     <div className="about-intro">
                         <div className="intro-text">
-                            <h3>Hello, I'm <span className="name">Hajra Amin</span></h3>
+                            <h3>Hello, I'm <span className="name">Ayesha Amin</span></h3>
                             <p>
                                 I'm a passionate <span className="highlight-text">web developer</span> with expertise in creating 
                                 dynamic, responsive, and user-friendly web applications. My journey 
