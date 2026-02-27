@@ -8,7 +8,7 @@ const Footer = () => {
             <div className="container">
                 <div className="footer-content">
                     <div className="footer-copyright">
-                        <p>&copy; {currentYear} Hajra Amin. All rights reserved.</p>
+                        <p>&copy; {currentYear} Ayesha Amin. All rights reserved.</p>
                     </div>
                     <div className="footer-social">
                         <a href="https://github.com/Ayeshaamin75" target="_blank" rel="noopener noreferrer" className="social-link">
