@@ -46,8 +46,8 @@ const Home = () => {
 
   const handleDownloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/Ayesha_Amin_Resume (1).pdf";
-    link.download = "Ayesha_Amin_Resume (1).pdf";
+    link.href = "/Ayesha_Amin_Resume.pdf";
+    link.download = "Ayesha_Amin_Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
